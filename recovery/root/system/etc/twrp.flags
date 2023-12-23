@@ -18,10 +18,10 @@
 /tranfs                   ext4     /dev/block/platform/bootdevice/by-name/tranfs            flags=display="Tranfs";
 
 ## Main Image Dynamic Partitions
-/system_bak               emmc      /dev/block/mapper/system                                flags=display="System (logical)";flashimg;backup;slotselect
-/vendor_bak               emmc      /dev/block/mapper/vendor                                flags=display="Vendor (logical)";flashimg;backup;slotselect
-/product_bak              emmc      /dev/block/mapper/product                               flags=display="Product (logical)";flashimg;backup;slotselect
-/system_ext_bak           emmc      /dev/block/mapper/system_ext                            flags=display="System Ext (logical)";flashimg;backup;slotselect
+/system_bak               emmc      /dev/block/mapper/system                                flags=display="System (logical)";flashimg;backup=1;slotselect
+/vendor_bak               emmc      /dev/block/mapper/vendor                                flags=display="Vendor (logical)";flashimg;backup=1;slotselect
+/product_bak              emmc      /dev/block/mapper/product                               flags=display="Product (logical)";flashimg;backup=1;slotselect
+/system_ext_bak           emmc      /dev/block/mapper/system_ext                            flags=display="System Ext (logical)";flashimg;backup=1;slotselect
 
 ## Sensitif Data (IMEI, SIM, Device Info)
 # below four partitions are ext4, but we are using only for backup so emmc
