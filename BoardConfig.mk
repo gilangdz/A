@@ -142,7 +142,7 @@ BOARD_USES_MTK_HARDWARE := true
 
 ## TWRP-Specific configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := x695c | Gilanggegea
+TW_DEVICE_VERSION := Enchaned X695C || Gilanggegea
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
@@ -165,11 +165,11 @@ TW_HAS_MTP := true
 # Recovery framerate
 TW_FRAMERATE := 60
 
-# Hide notch for orangefox
-ifneq ($(OF_HIDE_NOTCH),1)
-    TW_Y_OFFSET  := 100 
-    TW_H_OFFSET  := -100
-endif
+# StatusBar
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CPU_POS := "300"
+TW_CUSTOM_CLOCK_POS := "70"
+TW_CUSTOM_BATTERY_POS := "790"
 
 # Recovery fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
